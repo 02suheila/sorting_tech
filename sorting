@@ -1,0 +1,42 @@
+
+#SORTING-Sorting is the process of arranging items in a specific order or sequence
+
+#SELECTION SORT-the minimum element is selected from array and swap the smallest element from the array
+##l=list(map(int,input().split()))
+##for i in range(len(l)):
+##    k=i
+##    for j in range(i+1,len(l)):
+##        if l[j]<l[k]:
+##            k=j
+##    l[i],l[k]=l[k],l[i]
+##print(l)
+##
+
+##l=list(map(int,input().split()))
+##for i in range(len(l)):
+##    for j in range(i+1,len(l)):
+##        if l[i]>l[j]:
+##            l[i],l[j]=l[j],l[i]
+##
+##print(l)
+
+#BUBBLE SORT-two adjacent elements are compared.if adjacent are not at correct position,swapping would be performed
+
+##l=list(map(int,input().split()))
+##for i in range(len(l)-1):
+##    for j in range(len(l)-i-1):
+##        if l[j]>l[j+1]:
+##            l[j],l[j+1]=l[j+1],l[j]
+##
+##            print(l)
+
+#INSERTION SORT-
+
+##l=list(map(int,input().split()))
+##for i in range(1,len(l)):
+##    j=i
+##    while l[j-1]>l[j] and j>0:
+##        l[j-1],l[j]=l[j],l[j-1]
+##        #print(l,j)
+##        j-=1
+##print(l)       
