@@ -22,3 +22,26 @@ for i in range(len(l1)):
 print(x)
 
 
+#program-2:
+2 2 0 6 1 9 9 7
+def countingsort(l):
+    z=max(l)
+    a=[0]*(z+1)
+    for i in l:
+        a[i]+=1
+    for i in range(1,len(a)):
+        a[i]=a[i]+a[i-1]
+    k=[0]*len(l)
+    j=len(l)-1
+    while j>=0:
+        m=(a[l[j]])
+        m=m-1
+        a[l[j]]=m
+        k[m]=l[j]
+        j-=1  
+        
+    return k
+l=list(map(int,input().split()))
+
+print(countingsort(l))
+
