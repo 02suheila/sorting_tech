@@ -1,3 +1,38 @@
 1.Radix sort is a sorting algorithm that sorts the elements by first grouping the individual digits of the same place value. 
 2.Suppose, we have an array of 8 elements. First, we will sort elements based on the value of the unit place. Then, we will sort elements based on the value of the tenth place. This process goes on until the last significant place.
 3. counting sort is used as an intermediate sort in radix sort.
+
+
+def countingsort(l,p):
+    c=[0]*10
+    for i in l:
+        i=i//p
+        c[i%10]+=1
+    for i in range(1,len(c)):
+        c[i]=c[i-1]+c[i]
+    j=len(l)-1
+    l1=[0]*len(l)
+    print("c",c)
+    while j>=0:
+        z=l[j]//p
+        z=z%10
+        c[z]=c[z]-1
+        l1[c[z]]=l[j]
+        j-=1
+    print("l1",l1)
+    for i in range(len(l1)):
+        l[i]=l1[i]
+    print("l",l)
+def radixsort(l):
+    m=max(l)
+    p=1
+    while m//p>0:
+        countingsort(l,p)
+        p=p*10
+l=list(map(int,input().split()))
+radixsort(l)
+
+
+TIME-N+K
+SPACE-MAX
+STABILITY-YES
