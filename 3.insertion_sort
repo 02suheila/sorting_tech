@@ -1,4 +1,9 @@
 #INSERTION SORT-
+TIME COMPLEXITY-O(N)-BEST
+                o(n**2)-worst/average
+SPACE COMPLEXITY:1
+stability: yes,because it checks only adjacent elements
+
 
 ##l=list(map(int,input().split()))
 ##for i in range(1,len(l)):
