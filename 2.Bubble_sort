@@ -1,4 +1,7 @@
 #BUBBLE SORT-two adjacent elements are compared.if adjacent are not at correct position,swapping would be performed
+TIME-COMPLEXITY-Best-o(n)
+                average/worst-o(n**2)
+SPACE-COMPLEXITY-1
 
 ##l=list(map(int,input().split()))
 ##for i in range(len(l)-1):
